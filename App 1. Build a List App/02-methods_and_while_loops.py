@@ -1,2 +1,6 @@
+todos = []
+
 while True:
-    todo = input("Enter a to-do: ")
+    todo = input("Enter todo: ")
+    todos.append = todo
+    print(todos)
