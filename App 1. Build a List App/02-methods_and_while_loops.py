@@ -70,4 +70,32 @@
 # import builtins
 # print(dir(builtins))
 
-print(help(list.count))
+# print(help(list.count))
+
+todos = []
+
+while True:
+
+    user_input = input("Enter selection: ")
+    user_input = user_input.strip()
+        
+    match user_input:
+        case "add":
+            add_to_list = input("Enter item to list: ")
+            todos.append(add_to_list)
+            for item in todos:
+                print(item)
+            # print(todos)
+
+        case "show" | "display":
+            # print(todos)
+            for item in todos:
+                item = item.title()
+                print(item)
+
+        case "exit":
+            break
+        
+        case _:
+            print("wrong input.")
+        
