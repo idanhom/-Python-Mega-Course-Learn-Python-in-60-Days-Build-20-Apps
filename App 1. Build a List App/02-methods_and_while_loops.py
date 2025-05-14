@@ -90,8 +90,12 @@ while True:
         case "show" | "display":
             # print(todos)
             for item in todos:
-                item = item.title()
-                print(item)
+                print(item.capitalize())
+
+        case "spell":
+            for char in todos[0]:
+                print(char.upper())
+
 
         case "exit":
             break
