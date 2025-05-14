@@ -52,3 +52,14 @@
 #     country = input("Enter the country: ")
 #     countries.append(country)
 #     print(countries)    
+
+# print(dir(str))
+# help(str.capitalize)
+
+#
+# a = [1, 2, 3]
+# # dir(a)
+# a.append(4)
+# print(a)
+# help(list.append)
+
