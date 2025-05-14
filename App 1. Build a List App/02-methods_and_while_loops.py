@@ -84,7 +84,7 @@ while True:
             add_to_list = input("Enter item to list: ")
             todos.append(add_to_list)
         case "show" | "display":
-            for item in todos:
+            for idx, item in enumerate(todos):
                 print(item.capitalize())
         
         case "edit":
@@ -92,13 +92,14 @@ while True:
             # loop and print index of each item  
             
             for idx, item in enumerate(todos):
-                number = input("Select index to change")
                 print(idx, item)
+                number = input("Select index to change")
+                number = int(number) - 1
+
             # ask user to select
             #     note: python indexes from 0
             #     number = number - 1
             # replace item[number] = new_value
-            number = int(number) - 1
 
 
 
