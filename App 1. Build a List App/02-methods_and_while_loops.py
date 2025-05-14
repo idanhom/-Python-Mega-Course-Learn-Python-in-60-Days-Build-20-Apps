@@ -63,3 +63,11 @@
 # print(a)
 # help(list.append)
 
+# print(dir(str))
+
+#help(str.capitalize)
+
+# import builtins
+# print(dir(builtins))
+
+print(help(list.count))
