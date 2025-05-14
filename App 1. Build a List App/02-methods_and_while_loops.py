@@ -32,6 +32,10 @@
 #     print(x)
 #     x = x + 1
 
-name = input("Enter name: ")
-while True:
-    print(name)
+# name = input("Enter name: ")
+# while True:
+#     print(name)
+
+# while True:
+#     name = input("Enter name: ")
+#     print(name.capitalize())
