@@ -8,10 +8,21 @@
 # todo = input("Enter a to-do: ")
 # print(todo.capitalize())
 
-lists = []
+# lists = []
 
-while True:
-    list = input("Enter item: ")
-    list = list.capitalize()
-    lists.append(list)
-    print(lists)
+# while True:
+#     list = input("Enter item: ")
+#     list = list.capitalize()
+#     lists.append(list)
+#     print(lists)
+
+
+# user should input password
+# to be stored in variable 'password'
+# if 'password' != "p123"
+# print(f"your password is {password}")
+
+password = input("Enter password: ")
+while password != "p123":
+    password = input("Enter password: ")
+print("password is correct")
