@@ -83,17 +83,14 @@ while True:
         case "add":
             add_to_list = input("Enter item to list: ")
             todos.append(add_to_list)
-            for item in todos:
-                print(item)
         case "show" | "display":
-            # print(todos)
             for item in todos:
                 print(item.capitalize())
         case "exit":
             break
         case _:
-        
             print("wrong input.")
+
 print("Bye!")
 
 # buttons = ["cancel", "reply", "submit"]
