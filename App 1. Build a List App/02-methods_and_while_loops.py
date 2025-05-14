@@ -76,7 +76,7 @@ todos = []
 
 while True:
 
-    user_input = input("Enter selection: ")
+    user_input = input("Enter selection (add, show, edit, exit): ")
     user_input = user_input.strip()
         
     match user_input:
@@ -86,6 +86,22 @@ while True:
         case "show" | "display":
             for item in todos:
                 print(item.capitalize())
+        
+        case "edit":
+            # print "what index to change?"
+            # loop and print index of each item  
+            
+            for idx, item in enumerate(todos):
+                number = input("Select index to change")
+                print(idx, item)
+            # ask user to select
+            #     note: python indexes from 0
+            #     number = number - 1
+            # replace item[number] = new_value
+            number = int(number) - 1
+
+
+
         case "exit":
             break
         case _:
