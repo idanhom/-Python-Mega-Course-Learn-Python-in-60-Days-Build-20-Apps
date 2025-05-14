@@ -27,7 +27,11 @@
 #     password = input("Enter password: ")
 # print("password is correct")
 
-x = 1
-while x <= 6:
-    print(x)
-    x = x + 1
+# x = 1
+# while x <= 6:
+#     print(x)
+#     x = x + 1
+
+name = input("Enter name: ")
+while True:
+    print(name)
