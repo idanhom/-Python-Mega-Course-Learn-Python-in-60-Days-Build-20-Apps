@@ -22,7 +22,12 @@
 # if 'password' != "p123"
 # print(f"your password is {password}")
 
-password = input("Enter password: ")
-while password != "p123":
-    password = input("Enter password: ")
-print("password is correct")
+# password = input("Enter password: ")
+# while password != "p123":
+#     password = input("Enter password: ")
+# print("password is correct")
+
+x = 1
+while x <= 6:
+    print(x)
+    x = x + 1
