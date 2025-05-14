@@ -85,21 +85,27 @@ while True:
             todos.append(add_to_list)
             for item in todos:
                 print(item)
-            # print(todos)
-
         case "show" | "display":
             # print(todos)
             for item in todos:
                 print(item.capitalize())
-
-        case "spell":
-            for char in todos[0]:
-                print(char.upper())
-
-
         case "exit":
             break
-        
         case _:
-            print("wrong input.")
         
+            print("wrong input.")
+print("Bye!")
+
+# buttons = ["cancel", "reply", "submit"]
+
+# for i in buttons:
+#     print(i.capitalize())
+
+# buttons = ["cancel", "reply", "submit"]
+ 
+# for i in buttons:
+#     print(i.capitalize())
+
+# for item in ["sandals", "glasses", "trousers"]:
+#     print(item.capitalize())
+ 
