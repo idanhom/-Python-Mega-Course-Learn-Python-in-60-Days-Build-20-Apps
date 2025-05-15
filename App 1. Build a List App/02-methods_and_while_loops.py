@@ -86,17 +86,17 @@ while True:
             todos.append(add_to_list.capitalize())
 
         case "show" | "display":
-            for idx, item in enumerate(todos, start=1):
-                print(idx,":", item)
+            for item in todos:
+                print(item)
         
         case "edit":
             # print "what index to change?"
             # loop and print index of each item  
             
-            for idx, item in enumerate(todos, start=1):
-                print(idx, item)
-                number = input("Select index to change: ")
-                # number = int(number) - 1
+            for item in todos:
+                number = int(input("Select index to change: "))
+                number = int(number) - 1
+                
 
             # ask user to select
             #     note: python indexes from 0
