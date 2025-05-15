@@ -93,17 +93,11 @@ while True:
             # print "what index to change?"
             # loop and print index of each item  
             
-            for item in todos:
+            # for item in todos:
                 number = int(input("Select index to change: "))
-                number = int(number) - 1
-                
-
-            # ask user to select
-            #     note: python indexes from 0
-            #     number = number - 1
-            # replace item[number] = new_value
-
-
+                number = number - 1
+                new_todo = input("Enter new todo: ")
+                todos[number] = new_todo
 
         case "exit":
             break
