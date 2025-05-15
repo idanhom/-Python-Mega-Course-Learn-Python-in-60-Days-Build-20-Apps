@@ -78,23 +78,25 @@ while True:
 
     user_input = input("Enter selection (add, show, edit, exit): ")
     user_input = user_input.strip()
+
         
     match user_input:
         case "add":
             add_to_list = input("Enter item to list: ")
-            todos.append(add_to_list)
+            todos.append(add_to_list.capitalize())
+
         case "show" | "display":
-            for idx, item in enumerate(todos):
-                print(item.capitalize())
+            for idx, item in enumerate(todos, start=1):
+                print(idx,":", item)
         
         case "edit":
             # print "what index to change?"
             # loop and print index of each item  
             
-            for idx, item in enumerate(todos):
+            for idx, item in enumerate(todos, start=1):
                 print(idx, item)
-                number = input("Select index to change")
-                number = int(number) - 1
+                number = input("Select index to change: ")
+                # number = int(number) - 1
 
             # ask user to select
             #     note: python indexes from 0
