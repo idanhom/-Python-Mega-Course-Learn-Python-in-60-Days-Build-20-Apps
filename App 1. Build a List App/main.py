@@ -21,9 +21,6 @@ while True:
             new_item = input("Enter new item: ")
             todos[index_to_change] = new_item.capitalize()
             print(f"New item: {todos[index_to_change]}")
-            #here, again, return functionality
-            #to input idx to change
-            #then replace that index with new input
 
 
         case "exit":
