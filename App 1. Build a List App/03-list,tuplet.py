@@ -45,4 +45,8 @@ for filename in filenames:
 # for idx, filename in enumerate(filenames):
 #     print(f"{idx}-{filename.capitalize()}.txt")
 
+# help(list.pop)
+
+print(dir(list))
+
 help(list.pop)
