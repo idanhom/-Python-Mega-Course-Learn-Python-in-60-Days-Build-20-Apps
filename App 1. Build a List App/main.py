@@ -16,14 +16,11 @@ while True:
                 print(item)
         
         case "edit":
-            # print "what index to change?"
-            # loop and print index of each item  
-            
-            # for item in todos:
-                number = int(input("Select index to change: "))
-                number = number - 1
-                new_todo = input("Enter new todo: ")
-                todos[number] = new_todo
+                for index, item in enumerate(todos):
+                    row = f"{index} - {item}"
+                    print(row)
+
+
 
         case "exit":
             break

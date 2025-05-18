@@ -21,7 +21,21 @@ for filename in filenames:
 # elements[1] = "x"
 # print(elements)
 
-elements = ['a', 'b', 'c']
-new = 'x'
-elements[1] = new
-print(elements)
+# elements = ['a', 'b', 'c']
+# new = 'x'
+# new = elements[1]
+# print(elements)
+
+# rainfall = [
+#     3.14,
+#     3,
+#     "item1",
+#     []
+#     ]
+    
+# print(type(rainfall[0]))
+
+# products = ['table', 'chair', 'door']
+
+# for product in products:
+#     print(f"Product: {product}")
