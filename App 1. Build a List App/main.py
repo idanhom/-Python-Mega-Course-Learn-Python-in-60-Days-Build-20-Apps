@@ -12,14 +12,11 @@ while True:
             todos.append(add_to_list.capitalize())
 
         case "show" | "display":
-            for item in todos:
-                print(item)
+            for idx, item in enumerate(todos):
+                print(f"{idx}: {item}")
         
         case "edit":
-                for index, item in enumerate(todos):
-                    row = f"{index} - {item}"
-                    print(row)
-
+            
 
 
         case "exit":

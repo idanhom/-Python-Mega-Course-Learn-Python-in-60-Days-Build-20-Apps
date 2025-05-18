@@ -39,3 +39,10 @@ for filename in filenames:
 
 # for product in products:
 #     print(f"Product: {product}")
+
+# filenames = ['document', 'report', 'presentation']
+
+# for idx, filename in enumerate(filenames):
+#     print(f"{idx}-{filename.capitalize()}.txt")
+
+help(list.pop)
