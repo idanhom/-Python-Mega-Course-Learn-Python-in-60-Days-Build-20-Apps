@@ -16,7 +16,10 @@ while True:
                 print(f"{idx}: {item}")
         
         case "edit":
-            
+            print(item)
+            #here, again, return functionality
+            #to input idx to change
+            #then replace that index with new input
 
 
         case "exit":
