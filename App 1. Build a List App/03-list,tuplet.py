@@ -47,6 +47,11 @@ for filename in filenames:
 
 # help(list.pop)
 
+# print(dir(list))
+
+# help(list.pop)
+
+
 print(dir(list))
 
-help(list.pop)
+help(list.sort)
