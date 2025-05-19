@@ -52,6 +52,28 @@ for filename in filenames:
 # help(list.pop)
 
 
-print(dir(list))
+# print(dir(list))
 
-help(list.sort)
+# help(list.sort)
+
+"""
+Length Calculation in For-Loop
+
+See this list:
+mylist = ['a', 'b', 'c', 'd']
+
+Add some code that:
+(1) iterates over the items of mylist,
+(2) prints out the current length of the list in each iteration
+
+Here is how the output would look like:
+4
+4
+4
+4
+
+
+"""
+
+
+mylist = ['a', 'b', 'c', 'd']
