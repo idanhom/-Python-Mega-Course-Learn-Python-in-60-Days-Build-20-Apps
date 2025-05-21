@@ -1,5 +1,3 @@
-todos = []
-
 while True:
 
     user_input = input("Enter selection (add, show, edit, remove, exit): ")
@@ -8,8 +6,16 @@ while True:
         
     match user_input:
         case "add":
-            add_to_list = input("Enter item to list: ")
-            todos.append(add_to_list.capitalize())
+            todo = input("Enter item to list: ") + "\n"
+            
+            file = open('todos.txt', 'r')
+            todos = file.readlines()
+            file.close()
+
+            todos.append(todo.capitalize())
+            
+            file = open('todos.txt', 'w')
+            file.writelines(todos)
 
         case "show" | "display":
             for idx, item in enumerate(todos):
