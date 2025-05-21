@@ -7,8 +7,8 @@ while True:
     match user_input:
         case "add":
             todo = input("Enter item to list: ") + "\n"
-            
-            file = open('todos.txt', 'r')
+
+            file = open('todos.txt', 'w')
             todos = file.readlines()
             file.close()
 
