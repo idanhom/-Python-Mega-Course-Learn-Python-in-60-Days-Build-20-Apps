@@ -1,7 +1,8 @@
-contents = ["All carrots are sliced lonitudinally", "All carrots were reportedly sliced"]
+countries = ["Albania", "Belgium", "Canada", "Denmark", "Ethiopia", "France"]
+filenames = ['a.txt', 'b.txt', 'c.txt', 'd.txt', 'e.txt', 'f.txt']
 
-filenames = ["doc.txt", "report.txt"]
+for countries, filenames in zip(countries, filenames):
+    file = open(filenames, 'w')
+    file.write(countries)
+    file.close()
 
-for content, filename in zip(contents, filenames):
-    txt_file = open(f"files/{filename}", "w")
-    txt_file.write()
