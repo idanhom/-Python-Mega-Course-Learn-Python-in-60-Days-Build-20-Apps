@@ -7,7 +7,6 @@ while True:
         case 'add':
             new_name = input("Enter name: ")
             
-
             file = open('members.txt', 'a')
             file.write(new_name + '\n')
             file.close()
