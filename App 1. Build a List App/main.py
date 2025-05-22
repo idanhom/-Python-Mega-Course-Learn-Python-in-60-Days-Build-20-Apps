@@ -3,7 +3,6 @@ while True:
     user_input = input("Enter selection (add, show, edit, remove, exit): ")
     user_input = user_input.strip()
 
-        
     match user_input:
         case "add":
             todo = input("Enter item to list: ") + "\n"
@@ -18,9 +17,11 @@ while True:
             file.writelines(todos)
 
         case "show" | "display":
+            
             file = open('todos.txt', 'r')
             todos = file.readlines()
             file.close()
+
             for idx, item in enumerate(todos):
                 print(f"{idx + 1}: {item}")
         
