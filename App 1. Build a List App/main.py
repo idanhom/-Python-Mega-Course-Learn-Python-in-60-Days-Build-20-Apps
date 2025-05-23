@@ -33,10 +33,7 @@ while True:
             print(f"New item: {todos[index_to_change]}")
 
         case "remove":
-            # select which index to remove
             index_to_remove = int(input("Select item to remove: "))
-            # remove 1 from it (because of zero-indexing)
-            # index_to_remove = index_to_remove - 1
             print(f"Removed: {todos.pop(index_to_remove - 1)}")
 
 
