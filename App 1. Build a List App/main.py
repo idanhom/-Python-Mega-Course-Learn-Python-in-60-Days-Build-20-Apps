@@ -16,11 +16,18 @@ while True:
             file = open('todos.txt', 'r')
             todos = file.readlines()
             file.close()
+            
+
+            # new_todos = [item.strip('\n') for item in todos]
 
             for idx, item in enumerate(todos):
-                item = item.strip('\n')
-                print(f"{idx + 1}: {item}")
+                # item = item.strip('\n')
+                print(f"{idx + 1}: {item.strip('\n')}")
         
+
+
+
+
         case "edit":
             index_to_change = int(input("Enter index to change: "))
             index_to_change = index_to_change - 1

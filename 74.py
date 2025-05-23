@@ -1,6 +1,7 @@
-filenames = ["a.jpg", "b.jpg", "c.jpg"]
+names = ["john smith", "jay santi", "eva kuki"]
 
-filenames = ['renamed_' + filename.replace('.jpg', '.png') for filename in filenames]
+for name in names:
+    print(name.title())
+    
+print([name.title() for name in names])
 
-
-print(filenames)
