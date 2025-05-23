@@ -8,7 +8,7 @@ while True:
             todo = input("Enter item to list: ")
 
             file = open('todos.txt', 'a')
-            file.writelines(todo + '\n')
+            file.write(todo + '\n')
             file.close()
 
         case "show" | "display":
@@ -18,8 +18,8 @@ while True:
             file.close()
 
             for idx, item in enumerate(todos):
-                clean_item = item.strip('\n')
-                print(f"{idx + 1}: {clean_item}")
+                item = item.strip('\n')
+                print(f"{idx + 1}: {item}")
         
         case "edit":
             index_to_change = int(input("Enter index to change: "))
