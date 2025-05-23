@@ -5,16 +5,11 @@ while True:
 
     match user_input:
         case "add":
-            todo = input("Enter item to list: ") + "\n"
+            todo = input("Enter item to list: ")
 
-            file = open('todos.txt', 'w')
-            todos = file.readlines()
+            file = open('todos.txt', 'a')
+            file.writelines(todo + '\n')
             file.close()
-
-            todos.append(todo.capitalize())
-            
-            file = open('todos.txt', 'w')
-            file.writelines(todos)
 
         case "show" | "display":
             
@@ -23,7 +18,8 @@ while True:
             file.close()
 
             for idx, item in enumerate(todos):
-                print(f"{idx + 1}: {item}")
+                clean_item = item.strip('\n')
+                print(f"{idx + 1}: {clean_item}")
         
         case "edit":
             index_to_change = int(input("Enter index to change: "))
