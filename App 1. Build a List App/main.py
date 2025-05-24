@@ -31,7 +31,6 @@ while True:
 
 
 
-
         case "edit":
 
             with open('todos.txt', 'r') as file:
@@ -42,7 +41,7 @@ while True:
             todos[index_to_change] = new_item.strip() + '\n'
 
             with open('todos.txt', 'w') as file:
-                file.writelines()
+                file.writelines(todos)
 
             print(f"New item: {todos[index_to_change].strip()}")
 
