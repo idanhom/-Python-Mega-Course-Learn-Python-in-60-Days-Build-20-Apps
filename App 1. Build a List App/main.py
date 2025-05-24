@@ -50,16 +50,14 @@ while True:
 
 
         case "remove":
-            file = open('todos.txt', 'r')
-            todos = file.readlines()
-            file.close()
+            with open('todos.txt', 'r') as file:
+                todos = file.readlines()
 
             index_to_remove = int(input("Select item to remove: ")) - 1
             removed_item = todos.pop(index_to_remove)
 
-            file = open('todos.txt', 'w')
-            file.writelines(todos)
-            file.close()
+            with open('todos.txt', 'w') as file:
+                file.writelines(todos)
 
             print(f"Removed: {removed_item.strip()}")
 
