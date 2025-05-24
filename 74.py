@@ -1,7 +1,4 @@
-names = ["john smith", "jay santi", "eva kuki"]
+user_entries = ['10', '19.1', '20']
 
-for name in names:
-    print(name.title())
-    
-print([name.title() for name in names])
-
+as_float = ([float(i) for i in user_entries])
+print(sum(as_float))
