@@ -7,47 +7,48 @@ while True:
         case "add":
             todo = input("Enter item to list: ")
 
-            # file = open('todos.txt', 'a')
-            # file.write(todo + '\n')
-            # file.close()
+            with open('todos.txt', 'r') as file:
+                todos = file.readlines()
 
-            with open('todos.txt', 'a') as file:
-                file.write(todo + '\n')   
+            todos.append(todo + '\n')
 
-
-
-
+            with open('todos.txt', 'w') as file:
+                file.writelines(todos)
 
 
 
         case "show" | "display":
-            # file = open('todos.txt', 'r')
-            # todos = file.readlines()
-            # file.close()
-
 
             # this code is wrong, 
             with open('todos.txt', 'r') as file:
-                file.read()
+                todos = file.readlines()
 
 
             for idx, item in enumerate(todos):
                 print(f"{idx + 1}: {item.strip()}")
 
-        case "edit":
-            file = open('todos.txt', 'r')
-            todos = file.readlines()
-            file.close()
 
+
+
+
+
+        case "edit":
+
+            with open('todos.txt', 'r') as file:
+                todos = file.readlines()
+            
             index_to_change = int(input("Enter index to change: ")) - 1
             new_item = input("Enter new item: ")
             todos[index_to_change] = new_item.strip() + '\n'
 
-            file = open('todos.txt', 'w')
-            file.writelines(todos)
-            file.close()
+            with open('todos.txt', 'w') as file:
+                file.writelines()
 
             print(f"New item: {todos[index_to_change].strip()}")
+
+
+
+
 
         case "remove":
             file = open('todos.txt', 'r')
