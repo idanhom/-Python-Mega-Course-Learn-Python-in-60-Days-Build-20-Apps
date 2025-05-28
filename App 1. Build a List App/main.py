@@ -59,9 +59,7 @@ while True:
 
     elif "edit" in user_input:
 
-        number = int(user_input)[5:]
-        index_to_change = int(input("Enter index to change: ")) - 1
-
+        index_to_change = int(user_input[5:]) - 1
         with open('todos.txt', 'r') as file:
             todos = file.readlines()
         
@@ -81,7 +79,9 @@ while True:
         with open('todos.txt', 'r') as file:
             todos = file.readlines()
 
-        index_to_remove = int(input("Select item to remove: ")) - 1
+        index_to_remove = int(user_input[7:]) - 1
+
+        # index_to_remove = int(input("Select item to remove: ")) - 1
         removed_item = todos.pop(index_to_remove)
 
         with open('todos.txt', 'w') as file:
