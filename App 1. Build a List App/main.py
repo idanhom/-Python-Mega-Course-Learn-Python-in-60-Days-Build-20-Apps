@@ -43,7 +43,7 @@ while True:
 
 
 
-    elif "show" in user_input or "display" in user_input:
+    elif "show" in user_input or "display" in user_input or "ls" in user_input:
 
         # this code is wrong, 
         with open('todos.txt', 'r') as file:
@@ -59,7 +59,8 @@ while True:
 
     elif "edit" in user_input:
 
-        index_to_change = int(user_input[5:]) - 1
+        index_to_change = int(user_input[5:]) - 1 # Slices to number after 'edit' inc. space after. Then subtract 1 since Python does 0-indexing
+
         with open('todos.txt', 'r') as file:
             todos = file.readlines()
         
@@ -74,12 +75,12 @@ while True:
 
 
 
-
     elif "remove" in user_input:
         with open('todos.txt', 'r') as file:
             todos = file.readlines()
 
         index_to_remove = int(user_input[7:]) - 1
+        print(index_to_remove)
 
         # index_to_remove = int(input("Select item to remove: ")) - 1
         removed_item = todos.pop(index_to_remove)
