@@ -16,19 +16,22 @@ while True:
 
 
     has_digit = False
+    has_upper = True
     for char in password:
         if char.isdigit():
             has_digit = True
             break
-    values.append(has_digit)
-        
-
-    has_upper = False
-    for char in password:
+        values.append(has_digit)
         if char.isupper():
             has_upper = True
             break
-    values.append(has_upper)
+        values.append(has_upper)
+        
+
+    # has_upper = False
+    # for char in password:
+    #     if char.isupper():
+    #         break
 
 
 
