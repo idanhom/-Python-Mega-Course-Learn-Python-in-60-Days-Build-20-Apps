@@ -1,7 +1,3 @@
-# note: currently haven't implemented the full feature of index slicing 
-# (for edit and remove)
-
-
 
 while True:
 
@@ -21,26 +17,6 @@ while True:
 
         with open('todos.txt', 'w') as file:
             file.writelines(todos)
-
-
-            
-
-
-
-
-        
-    # match user_input:
-    #     case "add":
-    #         todo = input("Enter item to list: ")
-
-    #         with open('todos.txt', 'r') as file:
-    #             todos = file.readlines()
-
-    #         todos.append(todo + '\n')
-
-    #         with open('todos.txt', 'w') as file:
-    #             file.writelines(todos)
-
 
 
     elif "show" in user_input or "display" in user_input or "ls" in user_input:
@@ -92,11 +68,6 @@ while True:
 
     elif "exit" in user_input:
         break
-
-    # if _ in user_input:
-    #     print("wrong input.")
-
-
     else:
         print("Command is not valid.")
 
