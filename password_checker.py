@@ -4,42 +4,36 @@
 
 
 while True:
-    password_list = []
     values = []
 
-    password_list = input("Enter password to check: ")
+    password = input("Enter password to check: ")
 
-    if len(password_list) >= 8:
+    if len(password) >= 8:
         values.append(True)
-    elif len(password_list) <= 7:
+    else:
         values.append(False)
 
-    for password in password_list:
-        for char in password:
-            if char.isdigit():
-                values.append(True)
-                break
-        else:
-            values.append(False)
-            # print(f"Password {password_list[0]} contains at least one digit.")
+
+
+    has_digit = False
+    for char in password:
+        if char.isdigit():
+            has_digit = True
             break
-            
-    for password in password_list:
-        for char in password:
-            if char.isupper():
-                values.append(True)
-                break
-        else:
-            values.append(False)
-            print(f"Password {password_list[0]} contains at least one uppercase letter.")
-            break
+    values.append(has_digit)
         
 
-    
+    has_upper = False
+    for char in password:
+        if char.isupper():
+            has_upper = True
+            break
+    values.append(has_upper)
 
 
 
-    if all(values) == True:
+
+    if all(values):
         print("Password is good.")
     else:
         print("Password does not fulfill requirements.")
