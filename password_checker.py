@@ -2,10 +2,10 @@
 
 
 
-password_list = []
-values = []
 
 while True:
+    password_list = []
+    values = []
 
     password_list = input("Enter password to check: ")
 
@@ -21,7 +21,7 @@ while True:
                 break
         else:
             values.append(False)
-            print(f"Password {password_list[0]} contains at least one digit.")
+            # print(f"Password {password_list[0]} contains at least one digit.")
             break
             
     for password in password_list:
