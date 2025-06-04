@@ -5,7 +5,7 @@ while True:
     user_input = user_input.strip()
 
 
-    if 'add' in user_input:
+    if user_input.startswith("add"):
         todo = user_input[4:]
 
         with open('todos.txt', 'r') as file:
@@ -17,7 +17,7 @@ while True:
             file.writelines(todos)
 
 
-    elif "show" in user_input or "display" in user_input or "ls" in user_input:
+    elif user_input.startswith("show") or user_input.startswith("display") or user_input.startswith("ls"):
         with open('todos.txt', 'r') as file:
             todos = file.readlines()
 
@@ -29,7 +29,7 @@ while True:
 
 
 
-    elif "edit" in user_input:
+    elif user_input.startswith("edit"):
 
         index_to_change = int(user_input[5:]) - 1 # Slices to number after 'edit' inc. space after. Then subtract 1 since Python does 0-indexing
 
@@ -47,7 +47,7 @@ while True:
 
 
 
-    elif "remove" in user_input:
+    elif user_input.startswith("remove"):
         with open('todos.txt', 'r') as file:
             todos = file.readlines()
 
@@ -61,7 +61,7 @@ while True:
 
         print(f"Removed: {removed_item.strip()}")
 
-    elif "exit" in user_input:
+    elif user_input.startswith("exit"):
         break
     else:
         print("Command is not valid.")
