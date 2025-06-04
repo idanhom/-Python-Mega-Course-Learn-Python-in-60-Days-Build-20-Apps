@@ -6,8 +6,6 @@ while True:
 
 
     if 'add' in user_input:
-        #todo = input("Enter item to add: ")
-
         todo = user_input[4:]
 
         with open('todos.txt', 'r') as file:
@@ -20,15 +18,13 @@ while True:
 
 
     elif "show" in user_input or "display" in user_input or "ls" in user_input:
-
-        # this code is wrong, 
         with open('todos.txt', 'r') as file:
             todos = file.readlines()
 
 
         for idx, item in enumerate(todos):
-            print(f"{idx + 1}: {item.strip()}")
-
+            row = f"{idx + 1}: {item.strip('\n')}"
+            print(row)
 
 
 
