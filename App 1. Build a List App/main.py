@@ -54,7 +54,6 @@ while True:
         index_to_remove = int(user_input[7:]) - 1
         print(index_to_remove)
 
-        # index_to_remove = int(input("Select item to remove: ")) - 1
         removed_item = todos.pop(index_to_remove)
 
         with open('todos.txt', 'w') as file:
