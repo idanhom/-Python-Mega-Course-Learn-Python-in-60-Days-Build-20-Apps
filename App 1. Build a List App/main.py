@@ -30,37 +30,44 @@ while True:
 
 
     elif user_input.startswith("edit"):
+        try:
+            index_to_change = int(user_input[5:]) - 1 # Slices to number after 'edit' inc. space after. Then subtract 1 since Python does 0-indexing
 
-        index_to_change = int(user_input[5:]) - 1 # Slices to number after 'edit' inc. space after. Then subtract 1 since Python does 0-indexing
+            with open('todos.txt', 'r') as file:
+                todos = file.readlines()
+            
+            new_item = input("Enter new item: ")
+            todos[index_to_change] = new_item.strip() + '\n'
 
-        with open('todos.txt', 'r') as file:
-            todos = file.readlines()
-        
-        new_item = input("Enter new item: ")
-        todos[index_to_change] = new_item.strip() + '\n'
+            with open('todos.txt', 'w') as file:
+                file.writelines(todos)
 
-        with open('todos.txt', 'w') as file:
-            file.writelines(todos)
-
-        print(f"New item: {todos[index_to_change].strip()}")
-
-
+            print(f"New item: {todos[index_to_change].strip()}")
+        except ValueError:
+            print("Your command is not valid.")
+            continue
 
 
     elif user_input.startswith("remove"):
-        with open('todos.txt', 'r') as file:
-            todos = file.readlines()
+        try:
+                
+            with open('todos.txt', 'r') as file:
+                todos = file.readlines()
 
-        index_to_remove = int(user_input[7:]) - 1
-        print(index_to_remove)
+            index_to_remove = int(user_input[7:]) - 1
 
-        removed_item = todos.pop(index_to_remove)
+            removed_item = todos.pop(index_to_remove)
 
-        with open('todos.txt', 'w') as file:
-            file.writelines(todos)
+            with open('todos.txt', 'w') as file:
+                file.writelines(todos)
 
-        print(f"Removed: {removed_item.strip()}")
+            print(f"Removed: {removed_item.strip()}")
 
+        except IndexError:
+            print("No item with that number.")
+            continue
+
+        
     elif user_input.startswith("exit"):
         break
     else:
