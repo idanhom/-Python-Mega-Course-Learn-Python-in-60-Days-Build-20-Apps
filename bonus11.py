@@ -1,7 +1,8 @@
-def get_average():
-    with open('data.txt', 'r') as file_local:
-        data_local = file_local.readlines()
-        data = data_local[1:]
-    return data_local
-
-print(get_average())
+def get_max():
+    grades = [9.6, 9.2, 9.7]
+    maximum = max(grades)
+    minimum = min(grades)
+    min_max = f"Max: {maximum}\nMin: {minimum}"
+    return min_max
+    
+print(get_max())
