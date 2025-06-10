@@ -1,3 +1,8 @@
+def get_todos():
+    with open('todos.txt', 'r') as file:
+        todos = file.readlines()
+        return todos
+
 
 while True:
 
@@ -8,8 +13,7 @@ while True:
     if user_input.startswith("add"):
         todo = user_input[4:]
 
-        with open('todos.txt', 'r') as file:
-            todos = file.readlines()
+        todos = get_todos()
         
         todos.append(todo + '\n')
 
@@ -18,8 +22,7 @@ while True:
 
 
     elif user_input.startswith("show") or user_input.startswith("display") or user_input.startswith("ls"):
-        with open('todos.txt', 'r') as file:
-            todos = file.readlines()
+        todos = get_todos()
 
 
         for idx, item in enumerate(todos):
@@ -33,8 +36,7 @@ while True:
         try:
             index_to_change = int(user_input[5:]) - 1 # Slices to number after 'edit' inc. space after. Then subtract 1 since Python does 0-indexing
 
-            with open('todos.txt', 'r') as file:
-                todos = file.readlines()
+            todos = get_todos()
             
             new_item = input("Enter new item: ")
             todos[index_to_change] = new_item.strip() + '\n'
@@ -51,8 +53,9 @@ while True:
     elif user_input.startswith("remove"):
         try:
                 
-            with open('todos.txt', 'r') as file:
-                todos = file.readlines()
+            todos = get_todos()
+
+
             index_to_remove = int(user_input[7:]) - 1
             removed_item = todos.pop(index_to_remove)
 
