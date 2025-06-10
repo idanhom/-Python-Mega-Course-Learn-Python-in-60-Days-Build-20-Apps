@@ -1,6 +1,0 @@
-install linux
-help friend
-add new soap
-
-make soup
-fix bike
