@@ -3,9 +3,6 @@ def get_todos():
         todos_local = file_local.readlines()
     return todos_local
 
-
-
-
 while True:
 
     user_input = input("Enter selection (add, show, edit, remove, exit): ")
