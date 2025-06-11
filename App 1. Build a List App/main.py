@@ -3,6 +3,14 @@ def get_todos(filepath):
         todos_local = file_local.readlines()
     return todos_local
 
+
+def write_todos(filepath, todos_list):
+    with open(filepath, 'w') as file_local:
+        file_local.writelines(todos_list)
+
+
+
+
 while True:
 
     user_input = input("Enter selection (add, show, edit, remove, exit): ")
@@ -16,9 +24,7 @@ while True:
         
         todos.append(todo + '\n')
 
-        with open('todos.txt', 'w') as file:
-            file.writelines(todos)
-
+        
 
     elif user_input.startswith("show") or user_input.startswith("display") or user_input.startswith("ls"):
         todos = get_todos('todos.txt')
@@ -40,6 +46,12 @@ while True:
             new_item = input("Enter new item: ")
             todos[index_to_change] = new_item.strip() + '\n'
 
+
+
+
+            ## implement the function
+            # https://chatgpt.com/g/g-68224f68f00481919450c37b53dfa936-python-teacher
+            write_todos('todos.txt', todos_list)
             with open('todos.txt', 'w') as file:
                 file.writelines(todos)
 
