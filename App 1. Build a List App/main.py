@@ -3,7 +3,6 @@ def get_todos(filepath):
         todos_local = file_local.readlines()
     return todos_local
 
-
 def write_todos(filepath, todos_list):
     with open(filepath, 'w') as file_local:
         file_local.writelines(todos_list)
@@ -23,6 +22,7 @@ while True:
         todos = get_todos('todos.txt')
         
         todos.append(todo + '\n')
+        write_todos('todos.txt', todos)
 
         
 
@@ -46,14 +46,7 @@ while True:
             new_item = input("Enter new item: ")
             todos[index_to_change] = new_item.strip() + '\n'
 
-
-
-
-            ## implement the function
-            # https://chatgpt.com/g/g-68224f68f00481919450c37b53dfa936-python-teacher
-            write_todos('todos.txt', todos_list)
-            with open('todos.txt', 'w') as file:
-                file.writelines(todos)
+            write_todos('todos.txt', todos)
 
             print(f"New item: {todos[index_to_change].strip()}")
         except ValueError:
@@ -70,8 +63,8 @@ while True:
             index_to_remove = int(user_input[7:]) - 1
             removed_item = todos.pop(index_to_remove)
 
-            with open('todos.txt', 'w') as file:
-                file.writelines(todos)
+            write_todos('todos.txt', todos)
+
             print(f"Removed: {removed_item.strip()}")
 
         except IndexError:
