@@ -1,3 +1,6 @@
+# https://redeploy.udemy.com/course/the-python-mega-course/learn/quiz/5902640#overview
+
+
 def strength(password):
     list_true = []
     
@@ -7,12 +10,23 @@ def strength(password):
         list_true.append(False)
     
     for char in password:
-        if char.upper() is True:
+        if char.isupper():
             list_true.append(True)
             break
-        else:
+        elif char.isupper() != True:
             list_true.append(False)
+            break
             
+    # for digit in password:
+    #     if digit.isdigit():
+    #         list_true.append(True)
+    #         break
+    #     elif digit.isdigit() != True:
+    #         list_true.append(False)
+    #         break
+
+
+
 
 
     print(list_true)
