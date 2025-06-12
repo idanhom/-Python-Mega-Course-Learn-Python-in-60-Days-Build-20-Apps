@@ -1,6 +1,3 @@
-# https://redeploy.udemy.com/course/the-python-mega-course/learn/quiz/5902640#overview
-
-
 def strength(password):
     list_true = []
     
@@ -24,14 +21,7 @@ def strength(password):
             continue
         
     if all(list_true) and len(list_true) == 3:
-        print("Password is safe.")
+        return("Strong Password")
     else:
-        print("Password is unsafe")
+        return("Weak Password")        
 
-    print(list_true)
-
-
-
-password = input("Enter password to check! ")
-
-strength(password)
