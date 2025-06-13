@@ -1,4 +1,4 @@
-def strength(password):
+def strength(password, list_true):
     list_true = []
     
     if len(password) >= 8:
@@ -20,8 +20,13 @@ def strength(password):
         else:
             continue
         
+    print(list_true)
+    
     if all(list_true) and len(list_true) == 3:
-        return("Strong Password")
+        return ("Strong Password")
     else:
         return("Weak Password")        
+
+input_password = input("Enter password: ")
+print(strength(input_password, list))
 
