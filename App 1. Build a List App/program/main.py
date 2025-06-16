@@ -1,7 +1,10 @@
 from functions import get_todos, write_todos
+import time
 
 
 while True:
+    now = time.strftime("%H:%M")
+    print(f"Time: {now}")
 
     user_input = input("Enter selection (add, show, edit, remove, exit): ")
     user_input = user_input.strip()
