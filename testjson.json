@@ -1,0 +1,12 @@
+[
+    {
+    "question": "what are dolphins?",
+    "alternatives": ["fish", "mammals"],
+    "correct_answer" : 1
+    },
+    {
+    "question": "what are humans?",
+    "alternatives": ["fish", "mammals"],
+    "correct_answer" : 1        
+    }
+]
