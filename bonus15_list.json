@@ -7,6 +7,7 @@
     {
         "question_text": "What occupies most of the Earth's surface?",
         "alternatives": ["Land", "Water"],
+        "test"
         "correct_answer": 2
     }
 ]
