@@ -11,4 +11,5 @@ def parse(user_input):
     upper_bound = int(parts[1])
     
     # Inject the values in a dictionary
-    return {"lower_bound": lower_bound, "upper_bound": upper_bound}
+    return {"lower_bound": lower_bound, "upper_bound": upper_bound
+}
